@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>teste</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- CSS import Tailwind -->
+  </head>
+  <body>
+    <!-- header -->
+    <header></header>
+    <!-- main -->
+    <main>
+      <!-- section hero -->
+      <section
+        class="relative flex flex-col items-center justify-center h-[100vh] bg-cover bg-fixed bg-center bg-no-repeat bg-[url('https://joseisaacpy.github.io/developer-portfolio/img/hero/hero-image.webp')] text-white"
+      >
+        <!-- Overlay escuro -->
+        <div class="absolute inset-0 bg-black/50"></div>
+        <!-- Conteúdo acima do overlay -->
+        <div
+          class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center"
+        >
+          <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-center">
+            Olá, me chamo <span class="text-blue-400">José Isaac</span>!
+          </h1>
+          <p class="text-xl md:text-2xl font-medium mb-2">
+            Desenvolvedor
+            <span class="text-blue-300 font-bold">Full Stack</span>
+          </p>
+          <p class="text-lg md:text-xl text-gray-200">
+            Transformando ideias em código.<span
+              class="text-blue-300 font-bold"
+            >
+              Vamos criar algo juntos?</span
+            >
+          </p>
+        </div>
+      </section>
+      <!-- section sobre -->
+      <!-- section projetos -->
+      <section id="projetos"></section>
+      <!-- section contato -->
+    </main>
+    <!-- footer -->
+    <footer></footer>
+  </body>
+</html>
