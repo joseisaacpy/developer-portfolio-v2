@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>teste</title>
+    <title>Isaac | Dev</title>
     <!-- Tailwind CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Font-Awesome -->
@@ -18,10 +18,29 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <!-- Umami Analytics -->
+
+    <!-- Estilos extras -->
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
   </head>
   <body>
     <!-- header -->
-    <header></header>
+    <header>
+      <nav class="flex items-center justify-between p-4 bg-gray-800 text-white">
+        <h1>Logo</h1>
+        <ul class="flex gap-2">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Tecnologias</a></li>
+          <li><a href="#">Projetos</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
     <!-- main -->
     <main>
       <!-- section hero -->
@@ -51,9 +70,16 @@
         </div>
       </section>
       <!-- section sobre -->
+      <!-- section tecnologias -->
+      <section id="tecnologias">
+        <div id="tecnologias"></div>
+      </section>
       <!-- section projetos -->
       <section id="projetos">
-        <div id="container-projetos"></div>
+        <div
+          id="container-projetos"
+          class="grid p-2 items-center justify-center m-auto grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3"
+        ></div>
       </section>
       <!-- section contato -->
     </main>

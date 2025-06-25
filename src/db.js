@@ -18,6 +18,7 @@ db.run(`CREATE TABLE IF NOT EXISTS projetos (
   nome TEXT NOT NULL,
   descricao TEXT,
   data_criacao TEXT DEFAULT (datetime('now')),
+  link TEXT,
   status TEXT
 )`);
 

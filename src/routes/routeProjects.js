@@ -9,7 +9,7 @@ const router = Router();
 // Criação de um novo projeto
 router.post("/", (req, res) => {
   const { nome, descricao, data_criacao, status } = req.body;
-  const sql = `INSERT INTO projetos (nome, descricao, data_criacao, status) VALUES (?, ?, ?, ?)`;
+  const sql = `INSERT INTO projetos (nome, descricao, data_criacao, link, status) VALUES (?, ?, ?, ?, ?)`;
   db.run(sql, [nome, descricao, data_criacao, status], (err) => {
     if (err) {
       res.status(500).send("Erro ao criar projeto");
@@ -20,6 +20,7 @@ router.post("/", (req, res) => {
         nome,
         descricao,
         data_criacao,
+        link,
         status,
       },
     });
@@ -55,9 +56,9 @@ router.get("/:id", (req, res) => {
 // Atualização de um projeto
 router.put("/:id", (req, res) => {
   const { id } = req.params;
-  const { nome, descricao, data_criacao, status } = req.body;
-  const sql = `UPDATE projetos SET nome = ?, descricao = ?, data_criacao = ?, status = ? WHERE id = ?`;
-  db.run(sql, [nome, descricao, data_criacao, status, id], (err) => {
+  const { nome, descricao, data_criacao, link, status } = req.body;
+  const sql = `UPDATE projetos SET nome = ?, descricao = ?, data_criacao = ?, link = ?,status = ? WHERE id = ?`;
+  db.run(sql, [nome, descricao, data_criacao, link, status, id], (err) => {
     if (err) {
       res.status(500).send("Erro ao atualizar projeto");
     }
@@ -68,6 +69,7 @@ router.put("/:id", (req, res) => {
         nome,
         descricao,
         data_criacao,
+        link,
         status,
       },
     });

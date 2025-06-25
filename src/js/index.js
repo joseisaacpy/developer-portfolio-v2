@@ -11,13 +11,15 @@ async function renderProjetos() {
     // Cria uma div para o card do projeto
     let cardProjeto = document.createElement("div");
     // Define a classe do card
-    cardProjeto.className = "card-projeto";
+    cardProjeto.className =
+      "flex flex-col items-center justify-center p-4 rounded-lg shadow-md bg-red-400 ";
     // Preenche o card com as informações do projeto
     cardProjeto.innerHTML = `
       <h2>${projeto.nome}</h2>
       <p>${projeto.descricao}</p>
       <p>${projeto.data_criacao}</p>
       <p>${projeto.status}</p>
+      <p>${projeto.link}</p>
     `;
     // Adiciona o card ao container de projetos
     containerProjetos.appendChild(cardProjeto);
