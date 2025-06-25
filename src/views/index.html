@@ -6,7 +6,18 @@
     <title>teste</title>
     <!-- Tailwind CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- CSS import Tailwind -->
+    <!-- Font-Awesome -->
+    <script
+      src="https://kit.fontawesome.com/5432a0e64c.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- header -->
@@ -21,14 +32,14 @@
         <div class="absolute inset-0 bg-black/50"></div>
         <!-- Conteúdo acima do overlay -->
         <div
-          class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center"
+          class="p-2 relative z-10 flex flex-col items-center justify-center h-full text-white text-center"
         >
           <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-center">
             Olá, me chamo <span class="text-blue-400">José Isaac</span>!
           </h1>
           <p class="text-xl md:text-2xl font-medium mb-2">
             Desenvolvedor
-            <span class="text-blue-300 font-bold">Full Stack</span>
+            <span class="text-blue-300 font-bold">Front-End</span>
           </p>
           <p class="text-lg md:text-xl text-gray-200">
             Transformando ideias em código.<span
@@ -41,10 +52,14 @@
       </section>
       <!-- section sobre -->
       <!-- section projetos -->
-      <section id="projetos"></section>
+      <section id="projetos">
+        <div id="container-projetos"></div>
+      </section>
       <!-- section contato -->
     </main>
     <!-- footer -->
     <footer></footer>
+    <!-- JS -->
+    <script src="./js/index.js"></script>
   </body>
 </html>

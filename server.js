@@ -14,7 +14,7 @@ const port = 3000;
 // MIDDLEWARES
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "src")));
 app.use("/api/projetos", router); // CRUD de projetos
 
 // ROTAS
