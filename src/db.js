@@ -4,7 +4,7 @@ import sqlite3 from "sqlite3";
 // CONTANTES
 const { verbose } = sqlite3;
 const sqlite = verbose();
-const db = new sqlite.Database("database.db", (err) => {
+const db = new sqlite.Database("./src/db/database.db", (err) => {
   if (err) {
     console.error("Error opening database:", err.message);
   } else {
@@ -12,6 +12,7 @@ const db = new sqlite.Database("database.db", (err) => {
   }
 });
 
+// CRIAÇÃO DE TABELAS
 db.run(`CREATE TABLE IF NOT EXISTS projetos (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   nome TEXT NOT NULL,

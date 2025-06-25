@@ -3,6 +3,7 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import router from "./src/routes/routeProjects.js";
+import db from "./src/db.js";
 
 // CONSTANTES
 const __filename = fileURLToPath(import.meta.url);
@@ -11,10 +12,10 @@ const app = express();
 const port = 3000;
 
 // MIDDLEWARES
-app.use("/api/projects", router); // CRUD de projetos
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
+app.use("/api/projetos", router); // CRUD de projetos
 
 // ROTAS
 app.get("/", (req, res) => {
