@@ -1,5 +1,6 @@
 // IMPORTS
 import express from "express";
+import session from "express-session";
 import path from "path";
 import { fileURLToPath } from "url";
 import router from "./src/routes/routeProjects.js";
@@ -28,6 +29,10 @@ app.get("/curriculo", (req, res) => {
     path.join(__dirname, "public", "Jose-Isaac-Estagio-TI.pdf"),
     "Curriculo-Jose-Isaac.pdf"
   );
+});
+// Rota do ADM
+app.get("/admin", (req, res) => {
+  res.sendFile(path.join(__dirname, "src", "views", "login.html"));
 });
 
 // OUVINTE DE SERVIDOR
