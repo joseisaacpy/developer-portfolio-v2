@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Novo Projeto</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font-Awesome -->
+    <script
+      src="https://kit.fontawesome.com/5432a0e64c.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Umami Analytics -->
+
+    <!-- Estilos extras -->
+    <style>
+      /* Fonte */
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-blue-200">
+    <main>
+      <section class="flex flex-col gap-2 items-center justify-center">
+        <h1 class="text-3xl font-bold text-center text-black p-3">
+          Novo Projeto
+        </h1>
+        <!-- Form que faz post pra API de projetos -->
+        <form
+          action="/api/projetos"
+          method="post"
+          class="flex flex-col gap-2 w-[100%] md:w-[50%] border rounded-2xl p-4 shadow-lg bg-white"
+        >
+          <label for="nome">
+            <i class="fas fa-file-signature mr-1"></i>Nome:
+          </label>
+          </label>
+          <input
+            type="text"
+            name="nome"
+            id="nome"
+            autofocus
+            required
+            class="border p-2 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+            placeholder="Nome do Projeto"
+          />
+          <label for="descricao"><i class="fa-solid fa-comment mr-1"></i>Descricao:</label>
+          <input
+            class="border p-2 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+            type="text"
+            name="descricao"
+            id="descricao"
+            required
+            placeholder="Descrição do projeto"
+          />
+          <label for="data_criacao"><i class="fa-solid fa-calendar mr-1"></i>Data de Criação:</label>
+          <input
+            class="border p-2 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+            type="date"
+            name="data_criacao"
+            id="data_criacao"
+            required
+          />
+          <label for="link"><i class="fa-solid fa-link mr-1"></i>Link:</label>
+          <input
+            class="border p-2 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+            type="text"
+            name="link"
+            id="link"
+            required
+            placeholder="https://github.com/nomeDoRepositorio"
+          />
+          <label for="status"> <i class="fa-solid fa-list-check mr-1"></i>Status:</label>
+          <select
+            name="status"
+            id="status"
+            class="border p-2 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+            required
+          >
+            <option selected disabled>Selecione:</option>
+            <option value="Em andamento">Em andamento</option>
+            <option value="Concluído">Concluído</option>
+            <option value="Pausado">Pausado</option>
+          </select>
+          <span class="font-bold text-center" id="message"></span>
+          <button
+            class="bg-blue-500 text-white hover:bg-blue-600 transition duration-300 p-2 rounded-2xl font-bold"
+            type="submit"
+          >
+          Enviar
+          <i class="fa-solid fa-check ml-1 "></i>
+          </button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

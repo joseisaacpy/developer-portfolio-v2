@@ -8,9 +8,9 @@ const router = Router();
 // ROTAS
 // Criação de um novo projeto
 router.post("/", (req, res) => {
-  const { nome, descricao, data_criacao, status } = req.body;
+  const { nome, descricao, data_criacao, link, status } = req.body;
   const sql = `INSERT INTO projetos (nome, descricao, data_criacao, link, status) VALUES (?, ?, ?, ?, ?)`;
-  db.run(sql, [nome, descricao, data_criacao, status], (err) => {
+  db.run(sql, [nome, descricao, data_criacao, link, status], (err) => {
     if (err) {
       res.status(500).send("Erro ao criar projeto");
     }

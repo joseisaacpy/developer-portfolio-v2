@@ -32,7 +32,7 @@ app.get("/curriculo", (req, res) => {
 });
 // Rota do ADM
 app.get("/admin", (req, res) => {
-  res.sendFile(path.join(__dirname, "src", "views", "login.html"));
+  res.sendFile(path.join(__dirname, "src", "views", "form-projeto.html"));
 });
 
 // OUVINTE DE SERVIDOR
