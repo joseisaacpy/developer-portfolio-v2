@@ -28,14 +28,14 @@
       }
     </style>
   </head>
+
   <body class="bg-slate-300">
     <header class="p-3">
-      <h1 class="text-3xl font-bold text-center text-black">
-        Novo Projeto
-      </h1>
+      <h1 class="text-3xl font-bold text-center text-black">Novo Projeto</h1>
     </header>
-    <main>
-      <section class=" flex flex-col gap-2 items-center justify-center">
+    <main class="flex flex-col gap-4">
+      <!-- Section do form de projeto -->
+      <section class="flex flex-col gap-2 items-center justify-center">
         <!-- Form que faz post pra API de projetos -->
         <form
           action="/api/projetos"
@@ -44,7 +44,6 @@
         >
           <label for="nome">
             <i class="fas fa-file-signature mr-1"></i>Nome:
-          </label>
           </label>
           <input
             type="text"
@@ -55,7 +54,9 @@
             class="border p-2 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-400"
             placeholder="Nome do Projeto"
           />
-          <label for="descricao"><i class="fa-solid fa-comment mr-1"></i>Descricao:</label>
+          <label for="descricao"
+            ><i class="fa-solid fa-comment mr-1"></i>Descricao:</label
+          >
           <input
             class="border p-2 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-400"
             type="text"
@@ -64,7 +65,9 @@
             required
             placeholder="Descrição do projeto"
           />
-          <label for="data_criacao"><i class="fa-solid fa-calendar mr-1"></i>Data de Criação:</label>
+          <label for="data_criacao"
+            ><i class="fa-solid fa-calendar mr-1"></i>Data de Criação:</label
+          >
           <input
             class="border p-2 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-400"
             type="date"
@@ -81,7 +84,9 @@
             required
             placeholder="https://github.com/nomeDoRepositorio"
           />
-          <label for="status"> <i class="fa-solid fa-list-check mr-1"></i>Status:</label>
+          <label for="status">
+            <i class="fa-solid fa-list-check mr-1"></i>Status:</label
+          >
           <select
             name="status"
             id="status"
@@ -98,11 +103,23 @@
             class="bg-blue-500 text-white hover:bg-blue-600 transition duration-300 p-2 rounded-2xl font-bold"
             type="submit"
           >
-          Enviar
-          <i class="fa-solid fa-check ml-1 "></i>
+            Enviar
+            <i class="fa-solid fa-check ml-1"></i>
           </button>
         </form>
       </section>
+      <!-- Section para listar projetos -->
+      <section id="projetos">
+        <h2 class="text-3xl font-bold text-center text-blue-600">
+          Projetos Cadastrados
+        </h2>
+        <div
+          id="container-projetos"
+          class="grid p-2 items-center justify-center m-auto grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3"
+        ></div>
+      </section>
     </main>
+    <!-- JS -->
+    <script type="module" src="./js/cad-projetos.js"></script>
   </body>
 </html>

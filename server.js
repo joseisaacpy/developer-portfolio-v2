@@ -3,8 +3,8 @@ import express from "express";
 import session from "express-session";
 import path from "path";
 import { fileURLToPath } from "url";
-import routerProject from "./src/routes/routeProjects.js";
-import routerLogin from "./src/routes/routeAdmin.js";
+import projetosRoutes from "./src/routes/projetosRoutes.js";
+import adminRoutes from "./src/routes/adminRoutes.js";
 
 // CONSTANTES
 const __filename = fileURLToPath(import.meta.url);
@@ -26,8 +26,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "src")));
-app.use("/api/projetos", routerProject); // CRUD de projetos
-app.use("/login", routerLogin); // Rotas do ADM realizar login
+app.use("/api/projetos", projetosRoutes); // CRUD de projetos
+app.use("/login", adminRoutes); // Rotas do ADM realizar login
 
 // ROTAS
 // Rota raiz

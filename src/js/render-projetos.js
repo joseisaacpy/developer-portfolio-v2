@@ -1,8 +1,8 @@
 // Container dos projetos
 let containerProjetos = document.getElementById("container-projetos");
 
-// Função pra consumir API e renderizar os projetos
-async function renderProjetos() {
+// Função com export pra consumir API e renderizar os projetos
+export async function renderProjetos() {
   let response = await fetch("/api/projetos");
   let data = await response.json();
   containerProjetos.innerHTML = ""; // Limpa o container antes de renderizar os projetos
