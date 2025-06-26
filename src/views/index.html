@@ -30,7 +30,7 @@
   <body>
     <!-- header -->
     <header>
-      <nav class="flex items-center justify-between p-4 bg-gray-800 text-white">
+      <!-- <nav class="flex items-center justify-between p-4 bg-gray-800 text-white">
         <h1>Logo</h1>
         <ul class="flex gap-2">
           <li><a href="#">Home</a></li>
@@ -39,7 +39,7 @@
           <li><a href="#">Projetos</a></li>
           <li><a href="#">Contato</a></li>
         </ul>
-      </nav>
+      </nav> -->
     </header>
     <!-- main -->
     <main>
@@ -98,7 +98,7 @@
 
             <!-- Botão Currículo -->
             <a
-              href="/curriculo.pdf"
+              href="/curriculo"
               target="_blank"
               class="inline-block mt-6 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded shadow transition duration-300"
             >
@@ -109,8 +109,126 @@
       </section>
 
       <!-- section tecnologias -->
-      <section id="tecnologias">
-        <div id="tecnologias"></div>
+      <section
+        id="tecnologias"
+        class="py-16 bg-cover bg-fixed bg-no-repeat bg-white"
+      >
+        <!-- Container de tecnologias -->
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center text-blue-600 mb-10">
+            Tecnologias
+          </h2>
+
+          <div
+            id="container-tecnologias"
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 justify-center"
+          >
+            <!-- HTML, CSS e Tailwind -->
+            <div
+              class="flex flex-col items-center border shadow p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+            >
+              <div class="flex space-x-3 mb-2">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                  alt="Logo do HTML5"
+                  class="h-8 md:h-10"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                  alt="Logo do CSS3"
+                  class="h-8 md:h-10"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                  alt="Logo do Tailwind CSS"
+                  class="h-8 md:h-10"
+                />
+              </div>
+              <p class="text-sm font-medium text-center">
+                HTML, CSS e Tailwind CSS
+              </p>
+            </div>
+
+            <!-- JavaScript -->
+            <div
+              class="flex flex-col items-center border shadow p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                alt="Logo do JavaScript"
+                class="h-16"
+              />
+              <p class="mt-2 text-sm font-medium">JavaScript</p>
+            </div>
+
+            <!-- Node.js -->
+            <div
+              class="flex flex-col items-center border shadow p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg"
+                alt="Logo do Node.js"
+                class="h-16"
+              />
+              <p class="mt-2 text-sm font-medium">Node.js</p>
+            </div>
+
+            <!-- Express.js -->
+            <div
+              class="flex flex-col items-center border shadow p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+                alt="Logo do Express.js"
+                class="h-16"
+              />
+
+              <p class="mt-2 text-sm font-medium">Express.js</p>
+            </div>
+
+            <!-- MySQL -->
+            <div
+              class="flex flex-col items-center border shadow p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+                alt="Logo do MySQL"
+                class="h-16"
+              />
+              <p class="mt-2 text-sm font-medium">MySQL</p>
+            </div>
+
+            <!-- SQLite -->
+            <div
+              class="flex flex-col items-center border shadow p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg"
+                alt="Logo do SQLite"
+                class="h-16"
+              />
+              <p class="mt-2 text-sm font-medium">SQLite</p>
+            </div>
+            <!-- Git e GitHub -->
+            <div
+              class="flex flex-col items-center border shadow p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+            >
+              <div class="flex space-x-3 mb-2">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                  alt="Logo do Git"
+                  class="h-10 md:h-16"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                  alt="Logo do GitHub"
+                  class="h-10 md:h-16"
+                />
+              </div>
+              <p class="text-sm font-medium text-center">Git e GitHub</p>
+            </div>
+          </div>
+        </div>
       </section>
       <!-- section projetos -->
       <section id="projetos">

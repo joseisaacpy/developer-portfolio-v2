@@ -3,7 +3,6 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import router from "./src/routes/routeProjects.js";
-import db from "./src/db.js";
 
 // CONSTANTES
 const __filename = fileURLToPath(import.meta.url);
@@ -19,8 +18,16 @@ app.use(express.static(path.join(__dirname, "src")));
 app.use("/api/projetos", router); // CRUD de projetos
 
 // ROTAS
+// Rota raiz
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "src", "views", "index.html"));
+});
+// Rotas de curriculo
+app.get("/curriculo", (req, res) => {
+  res.download(
+    path.join(__dirname, "public", "Jose-Isaac-Estagio-TI.pdf"),
+    "Curriculo-Jose-Isaac.pdf"
+  );
 });
 
 // OUVINTE DE SERVIDOR
