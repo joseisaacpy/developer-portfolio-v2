@@ -28,17 +28,19 @@
       }
     </style>
   </head>
-  <body class="bg-blue-200">
+  <body class="bg-slate-300">
+    <header class="p-3">
+      <h1 class="text-3xl font-bold text-center text-black">
+        Novo Projeto
+      </h1>
+    </header>
     <main>
-      <section class="flex flex-col gap-2 items-center justify-center">
-        <h1 class="text-3xl font-bold text-center text-black p-3">
-          Novo Projeto
-        </h1>
+      <section class=" flex flex-col gap-2 items-center justify-center">
         <!-- Form que faz post pra API de projetos -->
         <form
           action="/api/projetos"
           method="post"
-          class="flex flex-col gap-2 w-[100%] md:w-[50%] border rounded-2xl p-4 shadow-lg bg-white"
+          class="flex flex-col gap-2 w-[96%] md:w-[50%] border rounded-2xl p-4 shadow-lg bg-white"
         >
           <label for="nome">
             <i class="fas fa-file-signature mr-1"></i>Nome:

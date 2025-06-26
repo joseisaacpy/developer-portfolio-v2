@@ -3,7 +3,8 @@ import express from "express";
 import session from "express-session";
 import path from "path";
 import { fileURLToPath } from "url";
-import router from "./src/routes/routeProjects.js";
+import routerProject from "./src/routes/routeProjects.js";
+import routerLogin from "./src/routes/routeAdmin.js";
 
 // CONSTANTES
 const __filename = fileURLToPath(import.meta.url);
@@ -11,18 +12,29 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const port = 3000;
 
+// Express Session
+app.use(
+  session({
+    secret: "chaveSecretaPortfolio",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+
 // MIDDLEWARES
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "src")));
-app.use("/api/projetos", router); // CRUD de projetos
+app.use("/api/projetos", routerProject); // CRUD de projetos
+app.use("/login", routerLogin); // Rotas do ADM realizar login
 
 // ROTAS
 // Rota raiz
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "src", "views", "index.html"));
 });
+
 // Rotas de curriculo
 app.get("/curriculo", (req, res) => {
   res.download(
@@ -30,6 +42,7 @@ app.get("/curriculo", (req, res) => {
     "Curriculo-Jose-Isaac.pdf"
   );
 });
+
 // Rota do ADM
 app.get("/admin", (req, res) => {
   res.sendFile(path.join(__dirname, "src", "views", "form-projeto.html"));

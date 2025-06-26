@@ -22,5 +22,10 @@ db.run(`CREATE TABLE IF NOT EXISTS projetos (
   status TEXT
 )`);
 
+db.run(`CREATE TABLE IF NOT EXISTS administradores(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  email TEXT NOT NULL,
+  senha TEXT NOT NULL)`);
+
 // EXPORTAÇÃO
 export default db;
