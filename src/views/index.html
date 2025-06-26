@@ -22,8 +22,39 @@
 
     <!-- Estilos extras -->
     <style>
+      /* Fonte */
       body {
         font-family: "Poppins", sans-serif;
+      }
+      /* Animação da mãozinha */
+      @keyframes wave {
+        0% {
+          transform: rotate(0deg);
+        }
+        15% {
+          transform: rotate(14deg);
+        }
+        30% {
+          transform: rotate(-8deg);
+        }
+        45% {
+          transform: rotate(14deg);
+        }
+        60% {
+          transform: rotate(-4deg);
+        }
+        75% {
+          transform: rotate(10deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+
+      .wave-hand {
+        display: inline-block;
+        animation: wave 2s ease-in-out infinite;
+        transform-origin: 70% 70%;
       }
     </style>
   </head>
@@ -54,15 +85,18 @@
           class="p-2 relative z-10 flex flex-col items-center justify-center h-full text-white text-center"
         >
           <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-center">
-            Olá, me chamo <span class="text-blue-400">José Isaac</span>!
+            Olá, me chamo <span class="text-blue-500">José Isaac</span>!<span
+              class="wave-hand"
+              >👋🏽</span
+            >
           </h1>
           <p class="text-xl md:text-2xl font-medium mb-2">
             Desenvolvedor
-            <span class="text-blue-300 font-bold">Front-End</span>
+            <span class="text-blue-500 font-bold">Front-End</span>
           </p>
           <p class="text-lg md:text-xl text-gray-200">
             Transformando ideias em código.<span
-              class="text-blue-300 font-bold"
+              class="text-blue-500 font-bold"
             >
               Vamos criar algo juntos?</span
             >
@@ -107,7 +141,6 @@
           </div>
         </div>
       </section>
-
       <!-- section tecnologias -->
       <section
         id="tecnologias"
@@ -115,7 +148,7 @@
       >
         <!-- Container de tecnologias -->
         <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold text-center text-blue-600 mb-10">
+          <h2 class="text-3xl font-bold text-center text-blue-600 mb-5">
             Tecnologias
           </h2>
 
@@ -125,7 +158,7 @@
           >
             <!-- HTML, CSS e Tailwind -->
             <div
-              class="flex flex-col items-center border shadow p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+              class="flex flex-col items-center justify-center border shadow p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
             >
               <div class="flex space-x-3 mb-2">
                 <img
@@ -232,6 +265,9 @@
       </section>
       <!-- section projetos -->
       <section id="projetos">
+        <h2 class="text-3xl font-bold text-center text-blue-600 mb-5">
+          Projetos
+        </h2>
         <div
           id="container-projetos"
           class="grid p-2 items-center justify-center m-auto grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3"
@@ -240,7 +276,11 @@
       <!-- section contato -->
     </main>
     <!-- footer -->
-    <footer></footer>
+    <footer class="p-2 bg-black">
+      <p class="font-light text-center text-white">
+        &copy; 2025 joseisaacpy - Todos os direitos reservados
+      </p>
+    </footer>
     <!-- JS -->
     <script src="./js/index.js"></script>
   </body>
