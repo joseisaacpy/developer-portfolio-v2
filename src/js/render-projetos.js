@@ -9,17 +9,22 @@ export async function renderProjetos(admin = false) {
   // Para cada projeto, cria um card
   data.forEach((projeto) => {
     let cardProjeto = document.createElement("div");
+
     cardProjeto.className =
       "flex flex-col gap-1 items-start justify-center p-4 rounded-lg shadow-md bg-red-400 w-full";
 
     cardProjeto.innerHTML = `
-      <h2 class="text-xl font-bold">${projeto.nome}</h2>
-      <p>${projeto.descricao}</p>
-      <p>${projeto.data_criacao}</p>
-      <p><strong>Status:</strong> ${projeto.status}</p>
-      <a href="${
+      <h2 class="text-xl font-bold"><i class="fa-solid fa-briefcase mr-1"></i> ${
+        projeto.nome
+      }</h2>
+      <p><i class="fa-solid fa-comment mr-1"></i> ${projeto.descricao}</p>
+      <p><i class="fa-solid fa-calendar mr-1"></i>Data de Criação: ${
+        projeto.data_criacao
+      }</p>
+      <p><i class="fa-solid fa-star mr-1"></i>Status: ${projeto.status}</p>
+      <a target="_blank" href="${
         projeto.link
-      }" class="text-blue-800 underline" target="_blank">Link</a>
+      }" class="text-blue-800 underline" target="_blank"> <i class="fa-solid fa-link mr-1"></i>Link do Projeto</a>
       
       ${
         admin

@@ -104,7 +104,7 @@
         </div>
       </section>
       <!-- section sobre -->
-      <section id="sobre" class="py-16 bg-gray-100 text-gray-800">
+      <section id="sobre" class="py-16 bg-white text-gray-900">
         <!-- Container -->
         <div class="mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
           <!-- Foto -->
@@ -142,10 +142,7 @@
         </div>
       </section>
       <!-- section tecnologias -->
-      <section
-        id="tecnologias"
-        class="py-16 bg-cover bg-fixed bg-no-repeat bg-white"
-      >
+      <section id="tecnologias" class="py-16 bg-cover text-gray-900">
         <!-- Container de tecnologias -->
         <div class="container mx-auto px-4">
           <h2 class="text-3xl font-bold text-center text-blue-600 mb-5">
@@ -158,7 +155,7 @@
           >
             <!-- HTML, CSS e Tailwind -->
             <div
-              class="flex flex-col items-center justify-center border shadow p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+              class="flex flex-col items-center justify-center border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
             >
               <div class="flex space-x-3 mb-2">
                 <img
@@ -184,7 +181,7 @@
 
             <!-- JavaScript -->
             <div
-              class="flex flex-col items-center border shadow p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+              class="flex flex-col items-center border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
             >
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
@@ -196,7 +193,7 @@
 
             <!-- Node.js -->
             <div
-              class="flex flex-col items-center border shadow p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+              class="flex flex-col items-center border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
             >
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg"
@@ -208,7 +205,7 @@
 
             <!-- Express.js -->
             <div
-              class="flex flex-col items-center border shadow p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+              class="flex flex-col items-center border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
             >
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
@@ -221,7 +218,7 @@
 
             <!-- MySQL -->
             <div
-              class="flex flex-col items-center border shadow p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+              class="flex flex-col items-center border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
             >
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
@@ -233,7 +230,7 @@
 
             <!-- SQLite -->
             <div
-              class="flex flex-col items-center border shadow p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+              class="flex flex-col items-center border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
             >
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg"
@@ -244,7 +241,7 @@
             </div>
             <!-- MongoDB -->
             <div
-              class="flex flex-col items-center border shadow p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+              class="flex flex-col items-center border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
             >
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
@@ -255,7 +252,7 @@
             </div>
             <!-- Git e GitHub -->
             <div
-              class="flex flex-col items-center border shadow p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
+              class="flex flex-col items-center border shadow-2xl p-4 rounded-2xl hover:scale-105 hover:shadow-lg transition duration-300"
             >
               <div class="flex space-x-3 mb-2">
                 <img
@@ -275,13 +272,21 @@
         </div>
       </section>
       <!-- section projetos -->
-      <section id="projetos">
-        <h2 class="text-3xl font-bold text-center text-blue-600 mb-5">
+      <section
+        id="projetos"
+        class="relative py-16 bg-gray-100 text-gray-800 bg-fixed bg-cover bg-center bg-[url('/img/background-techs.webp')]"
+      >
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+
+        <h2
+          class="relative z-10 text-3xl font-bold text-center text-white mb-5"
+        >
           Projetos
         </h2>
         <div
           id="container-projetos"
-          class="grid p-2 items-center justify-center m-auto grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3"
+          class="relative z-10 grid p-2 items-center justify-center m-auto grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3"
         ></div>
       </section>
       <!-- section contato -->
