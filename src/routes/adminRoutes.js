@@ -1,28 +1,39 @@
 // IMPORTS
 import { Router } from "express";
+import dotenv from "dotenv";
+import path from "path";
+import { fileURLToPath } from "url";
+
+dotenv.config();
 
 // CONSTANTES
 const router = Router();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // ROTAS
 router.get("/", (req, res) => {
-  res.send(`
-    <form method="POST" action="/login">
-      <input type="email" name="email" placeholder="Email" required/>
-      <input type="password" name="senha" placeholder="Senha" required/>
-      <button type="submit">Entrar</button>
-    </form>
-  `);
+  // Verifica se o usuário está logado
+  if (req.session && req.session.user) {
+    return res.redirect("/admin");
+  }
+  // Renderiza o arquivo HTML
+  res.sendFile(path.join(__dirname, "../views/login.html"));
 });
 
 router.post("/", (req, res) => {
   const { email, senha } = req.body;
-  if (email === "joseisaacnascimento@gmail.com" && senha === "12345678") {
-    req.session.user = { email };
-    res.redirect("/admin");
-  } else {
-    res.send("Login inválido");
+
+  if (!email || !senha) {
+    return res.status(400).send("Preencha todos os campos.");
   }
+
+  if (email === process.env.ADMIN_EMAIL && senha === process.env.ADMIN_SENHA) {
+    req.session.user = { email };
+    return res.status(200).send("Login bem-sucedido.");
+  }
+
+  return res.status(401).send("Email ou senha inválidos.");
 });
 
 export default router;
