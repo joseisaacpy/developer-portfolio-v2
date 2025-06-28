@@ -8,23 +8,28 @@ export async function renderProjetos(admin = false) {
   containerProjetos.innerHTML = "";
   // Para cada projeto, cria um card
   data.forEach((projeto) => {
+    // Cria o card de projeto
     let cardProjeto = document.createElement("div");
 
-    cardProjeto.className =
-      "flex flex-col gap-1 items-start justify-center p-4 rounded-lg shadow-md bg-red-400 w-full";
+    // Formata a data
+    let [ano, mes, dia] = projeto.data_criacao.split("-");
+    let dataFormatada = `${dia}/${mes}/${ano}`;
 
+    // Adiciona classes ao card
+    cardProjeto.className =
+      "flex flex-col gap-1 items-start justify-center p-4 rounded-lg shadow-md bg-slate-800 text-white w-full";
+
+    // Cria o HTML do card
     cardProjeto.innerHTML = `
       <h2 class="text-xl font-bold"><i class="fa-solid fa-briefcase mr-1"></i> ${
         projeto.nome
       }</h2>
       <p><i class="fa-solid fa-comment mr-1"></i> ${projeto.descricao}</p>
-      <p><i class="fa-solid fa-calendar mr-1"></i>Data de Criação: ${
-        projeto.data_criacao
-      }</p>
+      <p><i class="fa-solid fa-calendar mr-1"></i>Data de Criação: ${dataFormatada}</p>
       <p><i class="fa-solid fa-star mr-1"></i>Status: ${projeto.status}</p>
       <a target="_blank" href="${
         projeto.link
-      }" class="text-blue-800 underline" target="_blank"> <i class="fa-solid fa-link mr-1"></i>Link do Projeto</a>
+      }" class=" underline" target="_blank"> <i class="fa-solid fa-link mr-1"></i>Link do Projeto</a>
       
       ${
         admin
