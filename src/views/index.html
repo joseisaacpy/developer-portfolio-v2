@@ -340,21 +340,43 @@
           <div
             class="p-3 bg-white flex items-center justify-center gap-4 rounded-b-2xl w-full"
           >
-            <i class="text-3xl fa-brands fa-linkedin"></i>
-            <i class="text-3xl fa-brands fa-github"></i>
-            <i class="text-3xl fa-brands fa-instagram"></i>
-            <i class="text-3xl fa-brands fa-telegram"></i>
-            <i class="text-3xl fa-solid fa-envelope"></i>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/jos%C3%A9-isaac-nascimento/"
+              class="hover:scale-105 transition duration-300 hover:text-blue-500"
+              ><i class="text-3xl fa-brands fa-linkedin"></i
+            ></a>
+            <a
+              target="_blank"
+              href="https://github.com/joseisaacpy"
+              class="hover:scale-105 transition duration-300 hover:text-blue-500"
+              ><i class="text-3xl fa-brands fa-github"></i
+            ></a>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/j0se_isaacsn/"
+              class="hover:scale-105 transition duration-300 hover:text-blue-500"
+              ><i class="text-3xl fa-brands fa-instagram"></i
+            ></a>
+            <!-- Âncora pra copiar e-mail -->
+            <a
+              onclick="navigator.clipboard.writeText('joseisaacnascimento@gmail.com'); alert('E-mail copiado!')"
+              title="Copiar e-mail"
+              class="cursor-pointer hover:scale-105 transition duration-300 hover:text-blue-500"
+            >
+              <i class="text-3xl fa-solid fa-envelope"></i>
+            </a>
           </div>
         </div>
       </section>
     </main>
     <!-- footer -->
-    <footer class="p-2 bg-black">
-      <p class="font-light text-center text-white">
-        &copy; 2025 joseisaacpy - Todos os direitos reservados
+    <footer class="p-4 bg-black text-white text-center">
+      <p class="font-light">
+        &copy; 2025 <strong>joseisaacpy</strong> – Todos os direitos reservados.
       </p>
     </footer>
+
     <!-- JS -->
     <script type="module" src="./js/render-projetos.js"></script>
   </body>
