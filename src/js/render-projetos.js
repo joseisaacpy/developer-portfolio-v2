@@ -29,8 +29,8 @@ export async function renderProjetos(admin = false) {
       ${
         admin
           ? `<div class="flex gap-2 mt-2">
-              <button data-id="${projeto.id}" class="btn-editar bg-yellow-400 px-3 py-1 rounded">Editar</button>
-              <button data-id="${projeto.id}" class="btn-excluir bg-red-600 text-white px-3 py-1 rounded">Excluir</button>
+              <button data-id="${projeto.id}" class="btn-editar bg-yellow-400 px-3 py-1 rounded cursor-pointer hover:bg-yellow-500">Editar</button>
+              <button data-id="${projeto.id}" class="btn-excluir bg-red-600 text-white px-3 py-1 rounded cursor-pointer hover:bg-red-700">Excluir</button>
             </div>`
           : ""
       }
