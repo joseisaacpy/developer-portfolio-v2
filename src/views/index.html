@@ -45,26 +45,33 @@
       body {
         font-family: "Poppins", sans-serif;
       }
+
       /* Animação da mãozinha */
       @keyframes wave {
         0% {
           transform: rotate(0deg);
         }
+
         15% {
           transform: rotate(14deg);
         }
+
         30% {
           transform: rotate(-8deg);
         }
+
         45% {
           transform: rotate(14deg);
         }
+
         60% {
           transform: rotate(-4deg);
         }
+
         75% {
           transform: rotate(10deg);
         }
+
         100% {
           transform: rotate(0deg);
         }
@@ -82,24 +89,83 @@
       type="module"
     ></script>
   </head>
+
   <body>
     <!-- header -->
-    <header>
-      <!-- <nav class="flex items-center justify-between p-4 bg-gray-800 text-white">
-        <h1>Logo</h1>
-        <ul class="flex gap-2">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Tecnologias</a></li>
-          <li><a href="#">Projetos</a></li>
-          <li><a href="#">Contato</a></li>
+    <header class="relative">
+      <nav
+        class="flex items-center justify-between md:justify-around p-4 bg-gray-800 text-white"
+      >
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3">
+          <img
+            src="./img/dev-jose.png"
+            alt="Logo José Isaac"
+            class="w-12 h-12 rounded-full"
+          />
+          <span class="hidden md:inline font-semibold text-lg"
+            >joseisaacpy</span
+          >
+        </a>
+
+        <!-- Botão mobile -->
+        <button
+          id="menu-btn"
+          class="md:hidden focus:outline-none text-2xl"
+          aria-label="Abrir menu"
+        >
+          ☰
+        </button>
+
+        <!-- Menu -->
+        <ul
+          id="menu"
+          class="hidden z-100 absolute top-13 right-4 flex-col gap-2 p-4 shadow-lg rounded-2xl bg-white text-gray-800 md:static md:flex md:flex-row md:bg-transparent md:text-white md:p-0 md:gap-4 md:text-sm text-lg font-medium"
+        >
+          <li>
+            <a
+              href="#home"
+              class="block hover:scale-105 hover:text-blue-400 transition-all"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#sobre"
+              class="block hover:scale-105 hover:text-blue-400 transition-all"
+              >Sobre</a
+            >
+          </li>
+          <li>
+            <a
+              href="#tecnologias"
+              class="block hover:scale-105 hover:text-blue-400 transition-all"
+              >Tecnologias</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projetos"
+              class="block hover:scale-105 hover:text-blue-400 transition-all"
+              >Projetos</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contato"
+              class="block hover:scale-105 hover:text-blue-400 transition-all"
+              >Contato</a
+            >
+          </li>
         </ul>
-      </nav> -->
+      </nav>
     </header>
+
     <!-- main -->
     <main>
       <!-- section hero -->
       <section
+        id="home"
         class="relative flex flex-col items-center justify-center h-[100vh] bg-cover bg-fixed bg-center bg-no-repeat bg-[url('https://joseisaacpy.github.io/developer-portfolio/img/hero/hero-image.webp')] text-white"
       >
         <!-- Overlay escuro -->
@@ -325,7 +391,10 @@
         ></div>
       </section>
       <!-- section contato -->
-      <section class="bg-black flex flex-col items-center justify-center p-4">
+      <section
+        id="contato"
+        class="bg-black flex flex-col items-center justify-center p-4"
+      >
         <h4 class="text-2xl md:text-3xl font-bold text-center text-white">
           Conexões constroem pontes — vamos conversar!
         </h4>
@@ -378,6 +447,16 @@
     </footer>
 
     <!-- JS -->
+    <script>
+      // Script para abrir o menu mobile
+      const menu = document.getElementById("menu");
+      const menuButton = document.getElementById("menu-btn");
+      menuButton.addEventListener("click", () => {
+        // menu.classList.toggle("hidden");
+        menu.classList.toggle("hidden");
+        menu.classList.toggle("flex"); // adiciona 'flex' quando visível
+      });
+    </script>
     <script type="module" src="./js/render-projetos.js"></script>
   </body>
 </html>
