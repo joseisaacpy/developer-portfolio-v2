@@ -17,7 +17,7 @@ export async function renderProjetos(admin = false) {
 
     // Adiciona classes ao card
     cardProjeto.className =
-      "flex flex-col gap-1 items-start justify-center p-4 rounded-lg shadow-md bg-slate-800 text-white w-full";
+      "flex flex-col justify-between gap-1 p-4 rounded-lg shadow-md bg-slate-800 text-white w-full h-full";
 
     // Cria o HTML do card
     cardProjeto.innerHTML = `
