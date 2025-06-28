@@ -48,7 +48,7 @@ app.get("/admin", (req, res) => {
   res.sendFile(path.join(__dirname, "src", "views", "form-projeto.html"));
 });
 
-//
+// Rota 404 (Not Found)
 app.use((req, res) => {
   res.status(404).sendFile(path.join(__dirname, "src", "views", "404.html"));
 });

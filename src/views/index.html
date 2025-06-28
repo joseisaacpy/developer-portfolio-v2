@@ -57,6 +57,11 @@
         transform-origin: 70% 70%;
       }
     </style>
+    <!-- LottieFiles -->
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
   </head>
   <body>
     <!-- header -->
@@ -109,27 +114,34 @@
         <div class="mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
           <!-- Foto -->
           <div class="w-full md:w-1/3 flex justify-center">
-            <img
-              src="/img/foto-perfil.webp"
-              alt="José Isaac"
-              class="rounded-full w-64 h-64 object-cover shadow hover:scale-110 duration-300"
-            />
+            <dotlottie-player
+              src="https://lottie.host/70307135-523e-4663-93bd-03157061582f/gAH1c0RWfi.lottie"
+              background="transparent"
+              speed="1"
+              style="width: 300px; height: 300px"
+              loop
+              autoplay
+            ></dotlottie-player>
           </div>
 
           <!-- Textos -->
           <div class="w-full md:w-2/3 text-center md:text-left">
-            <h2 class="text-3xl font-bold mb-4 text-blue-600">Sobre Mim</h2>
+            <h2 class="text-3xl font-bold mb-4 text-blue-600">
+              Sobre Mim
+              <i class="fa fa-coffee text-gray-700 ml-2"></i>
+              <i class="fa-solid fa-laptop-code text-gray-700 ml-1"></i>
+            </h2>
             <p class="text-lg leading-relaxed mb-4">
-              Olá! Sou <strong class="text-blue-600">José Isaac</strong>, um
+              Olá! Me chamo <strong class="text-blue-600">José Isaac</strong>,
               desenvolvedor Front-End focado em transformar ideias em
-              experiências digitais impactantes. Curioso por natureza, gosto de
-              criar interfaces modernas, funcionais e acessíveis.
+              experiências digitais com personalidade. Com o notebook sempre na
+              tomada e uma xícara de café ao lado, crio interfaces modernas,
+              funcionais e acessíveis.
             </p>
             <p class="text-lg leading-relaxed">
-              Estou sempre buscando evoluir, aprendendo novas ferramentas e
-              colaborando em projetos que gerem valor real para as pessoas.
+              Apaixonado por tecnologia, estou em constante evolução —
+              aprendendo novas ferramentas e em busca de novos desafios.
             </p>
-
             <!-- Botão Currículo -->
             <a
               href="/curriculo"
