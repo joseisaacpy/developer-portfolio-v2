@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página não encontrada</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font-Awesome -->
+    <script
+      src="https://kit.fontawesome.com/5432a0e64c.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-blue-400 text-white font-[Poppins] min-h-screen flex items-center justify-center px-4"
+  >
+    <main class="max-w-5xl w-full">
+      <section
+        class="flex flex-col-reverse md:flex-row items-center justify-center gap-8"
+      >
+        <!-- Textos -->
+        <div
+          class="flex flex-col items-center md:items-start text-center md:text-left gap-4 md:w-1/2"
+        >
+          <h1 class="text-4xl md:text-5xl font-bold drop-shadow-lg">
+            <i
+              class="fa-solid fa-triangle-exclamation text-yellow-300 mr-2"
+            ></i>
+            Ops! Página não encontrada
+          </h1>
+          <p class="text-lg md:text-xl text-white/90">
+            A página que você está procurando não existe ou foi movida.
+          </p>
+          <a
+            href="/"
+            class="bg-white text-blue-500 font-semibold px-6 py-3 rounded-md shadow hover:bg-gray-100 transition"
+          >
+            <i class="fa-solid fa-arrow-left mr-2"></i>Voltar para a página
+            inicial
+          </a>
+        </div>
+
+        <!-- Imagem -->
+        <div class="md:w-1/2 flex justify-center">
+          <img
+            src="/img/404-robot.webp"
+            alt="Imagem de um robô com erro 404"
+            class="max-w-xs md:max-w-md w-full"
+          />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

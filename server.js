@@ -48,6 +48,11 @@ app.get("/admin", (req, res) => {
   res.sendFile(path.join(__dirname, "src", "views", "form-projeto.html"));
 });
 
+//
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, "src", "views", "404.html"));
+});
+
 // OUVINTE DE SERVIDOR
 app.listen(port, () => {
   console.log("Servidor rodando em http://localhost:3000");
