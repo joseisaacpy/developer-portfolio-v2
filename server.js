@@ -29,6 +29,14 @@ app.use(express.static(path.join(__dirname, "src")));
 app.use("/api/projetos", projetosRoutes); // CRUD de projetos
 app.use("/login", adminRoutes); // Rotas do ADM realizar login
 
+function autenticar(req, res, next) {
+  if (req.session && req.session.user) {
+    next(); // Usuário autenticado, continua
+  } else {
+    res.redirect("/login"); // Usuário não autenticado, redireciona para login
+  }
+}
+
 // ROTAS
 // Rota raiz
 app.get("/", (req, res) => {
@@ -44,7 +52,7 @@ app.get("/curriculo", (req, res) => {
 });
 
 // Rota do ADM
-app.get("/admin", (req, res) => {
+app.get("/admin", autenticar, (req, res) => {
   res.sendFile(path.join(__dirname, "src", "views", "form-projeto.html"));
 });
 
