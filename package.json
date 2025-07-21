@@ -2,9 +2,11 @@
   "dependencies": {
     "bcrypt": "^6.0.0",
     "concurrently": "^9.2.0",
-    "dotenv": "^16.5.0",
+    "dotenv": "^16.6.1",
     "express": "^5.1.0",
     "express-session": "^1.18.1",
+    "mongodb": "^6.17.0",
+    "mongoose": "^8.16.4",
     "ngrok": "^5.0.0-beta.2",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7"
