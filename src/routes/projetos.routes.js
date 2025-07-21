@@ -9,8 +9,7 @@ await connect(); // Vai dar o console.log informando que conectou
 // CONSTANTES
 const router = Router();
 
-// ROTAS
-
+// ROTAS:
 // POST
 router.post("/", async (req, res) => {
   try {
@@ -28,6 +27,18 @@ router.get("/", async (req, res) => {
     const allProjetos = await Projeto.find();
     res.json(allProjetos);
   } catch (error) {
+    res.status(500).json({ error: "Erro ao buscar projetos" });
+    console.error(error);
+  }
+});
+// GET por ID
+router.get("/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    const projeto = await Projeto.findById(id);
+    res.json(projeto);
+  } catch (error) {
+    res.status(404).json({ error: "Projeto nao encontrado" });
     console.error(error);
   }
 });

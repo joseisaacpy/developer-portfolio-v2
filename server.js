@@ -7,6 +7,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 // import adminRoutes from "./src/routes/adminRoutes.js";
 import projetosRoutes from "./src/routes/projetos.routes.js";
+
 // CONSTANTES
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -28,7 +29,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "src")));
 app.use("/api/projetos", projetosRoutes); // CRUD de projetos
-// app.use("/login", adminRoutes); // Rotas do ADM realizar login
+// Rotas do ADM realizar login
 
 function autenticar(req, res, next) {
   if (req.session && req.session.user) {
@@ -55,15 +56,6 @@ app.get("/curriculo", (req, res) => {
 // Rota do ADM
 app.get("/admin", autenticar, (req, res) => {
   res.sendFile(path.join(__dirname, "src", "views", "form-projeto.html"));
-});
-
-app.get("/projetosM", async (req, res) => {
-  try {
-    const allProjetos = await projetos.find();
-    res.json(allProjetos);
-  } catch (error) {
-    console.error(error);
-  }
 });
 
 // Rota 404 (Not Found)
